@@ -1,0 +1,53 @@
+{
+	"reportName": "Client",
+	"report": [{
+		"groupName": "ITO",
+		"useCases": [{
+			"useCaseName": "post client",
+			"groupName": "ITO",
+			"testName": "test_post_client",
+			"automationStatus": true,
+			"testStatus": false
+		}, {
+			"useCaseName": "get client",
+			"groupName": "ITO",
+			"testName": " A test_post_client",
+			"automationStatus": true,
+			"testStatus": true
+		}, {
+			"useCaseName": "putclient",
+			"groupName": "ITO",
+			"testName": "test_post_client",
+			"automationStatus": false,
+			"testStatus": false
+		}]
+	}, {
+		"groupName": "Lacerte",
+		"useCases": [{
+			"useCaseName": "post client",
+			"groupName": "Lacerte",
+			"testName": "test_post_client",
+			"automationStatus": false,
+			"testStatus": false
+		}]
+	}, {
+		"groupName": "ProSeries",
+		"useCases": [{
+			"useCaseName": "post client",
+			"groupName": "ProSeries",
+			"testName": "test_post_client",
+			"automationStatus": true,
+			"testStatus": true
+		}]
+	},
+  {
+    "groupName": "Lacerte",
+    "useCases": [{
+      "useCaseName": "post client",
+      "groupName": "Lacerte",
+      "testName": "test_post_client",
+      "automationStatus": false,
+      "testStatus": false
+    }]
+  }]
+}

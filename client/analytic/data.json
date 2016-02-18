@@ -1,0 +1,43 @@
+{
+  "reportName": "My 123 report",
+  "report": [{
+    "groupName": "ito",
+    "useCases": [{
+      "useCaseName": "post client",
+      "groupName": "",
+      "testName": "test_post_client",
+      "automationStatus": false,
+      "testStatus": true
+    }, {
+      "useCaseName": "get client",
+      "groupName": "",
+      "testName": "test_post_client",
+      "automationStatus": "",
+      "testStatus": " "
+    }, {
+      "useCaseName": "putclient",
+      "groupName": "",
+      "testName": "test_post_client",
+      "automationStatus": false,
+      "testStatus": false
+    }]
+  }, {
+    "groupName": "lacerte",
+    "useCases": [{
+      "useCaseName": "post client",
+      "groupName": "",
+      "testName": "test_post_client",
+      "automationStatus": true,
+      "testStatus": true
+    }]
+  }, {
+    "groupName": "turbotax",
+    "useCases": [{
+      "useCaseName": "post client",
+      "groupName": "",
+      "testName": "test_post_client",
+      "automationStatus": true,
+      "testStatus": false
+    }]
+  }]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="analytic">
+<head>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta charset=utf-8/>
+    <title>Analytic</title>
+</head>
+<body class="container">
+
+<div ng-controller="PieCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h4>{{reportAnalytic.reportName}}</h4></div>
+        <div class="panel-body">
+            <div class="row">
+
+            <div class="col-lg-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading"><h5>Test Automated/UnAutomated by Report</h5></div>
+                    <div class="panel-body">
+                        <canvas id="pie1" class="chart chart-pie"
+                                chart-legend="true"
+                                chart-data="dataAutomation"
+                                chart-labels="labelsAutomationStatus">
+                        </canvas>
+                    </div>
+                    <div class="panel-footer">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading"><h4>Test passed vs failed by Report</h4></div>
+                    <div class="panel-body">
+                        <canvas id="pie2" class="chart chart-pie"
+                                chart-data="dataTest"
+                                chart-legend="true"
+                                chart-labels="labelsTestStatus">
+                        </canvas>
+                    </div>
+                    <div class="panel-footer">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h5>Test passed vs failed by Group (<b class="text-danger">{{currentGroup}}</b>)</h5>
+
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="pie3" class="chart chart-pie"
+                                chart-legend="true"
+                                chart-data="dataGroup"
+                                chart-labels="labelsGroupTestStatus">
+                        </canvas>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="list-group">
+                            <button ng-repeat="group in groupData" ng-click="handleGroup(group)" class="list-group-item">
+                                <h5 class="list-group-item-heading">{{group.groupName}}</h5>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</body>
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../node_modules/angular-route/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="http://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+<script src="service.js"></script>
+<script src="analytic.js"></script>
+</html>
